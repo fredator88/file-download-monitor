@@ -1,0 +1,42 @@
+INSTALACJA
+
+1. Przejść do katalogu głównego aplikacji i edytować plik installService.bat. 
+
+Należy zmienić parametry SERVICE_DIRECTORY oraz PR_JVM.
+
+SERVICE_DIRECTORY - ścieżka do katalogu w którym znajduje się plik prunsrv.exe
+
+PR_JVM - ścieżka do pliku jvm.dll, np. "C:\Program Files (x86)\Java\jre1.8.0_73\bin\client\jvm.dll"
+
+2. Uruchomić CMD z prawami administratora. 
+3. W linii poleceń przejść do katalogu głównego aplikacji
+4. W linii poleceń uruchomić skrypt installService.bat w celu dodania usługi FileDownloadMonitor
+5. W linii poleceń uruchomić skrypt startService.bat w celu dodania usługi FileDownloadMonitor
+
+
+DEINSTALACJA
+
+1. Uruchomić CMD z prawami administratora. 
+2. W linii poleceń przejść do katalogu głównego aplikacji
+3. W linii poleceń uruchomić skrypt uninstallService.bat w celu usunięcia usługi FileDownloadMonitor
+
+
+
+ZMIANA KONFIGRUACJI
+
+1. Uruchomić CMD z prawami administratora. 
+2. W linii poleceń przejść do katalogu głównego aplikacji
+3. W linii poleceń uruchomić skrypt stopService.bat w celu zatrzymania usługi FileDownloadMonitor
+4. Edytować plik config.properties i zmienić wartości parametrów
+
+	Dostępne parametry:
+	
+	#adres URL pliku do sciagniecia
+	file_url=http://ubimob2013.sciencesconf.org/21283/document
+	#sciezka pod jaka plik ma zostac zapisany - każde wystąpienie zanku "\" należy zastąpić "\\"
+	file_download_dir=..\\file.pdf
+	#czas w sekundach miedzy iteracjami
+	time_interval=30
+
+5. Zapisać plik
+6. W linii poleceń uruchomić skrypt startService.bat w celu uruchomienia usługi FileDownloadMonitor
